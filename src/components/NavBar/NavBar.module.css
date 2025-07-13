@@ -1,0 +1,48 @@
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+  background-color: #201c1c;
+}
+
+.section {
+  display: flex;
+  gap: 25px;
+  padding: 5px;
+}
+
+a {
+  text-decoration: none;
+  color: beige;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+a:hover {
+  color: red;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+label {
+  cursor: pointer;
+}
+
+img {
+  padding: 0;
+  margin: 0;
+  align-self: baseline;
+  fill: beige;
+}
+
+.HomeIcon {
+  padding: 0;
+  margin: 0;
+  vertical-align: bottom;
+  fill: beige;
+}
+
+.HomeIcon:hover {
+  fill: red;
+}
