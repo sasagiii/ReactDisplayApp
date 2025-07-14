@@ -19,13 +19,13 @@ export default function NavBar() {
       </div>
       <div className={Styles.section}>
         <Link to="/Experience" className={Styles.link}>
-          <label>Open exp</label>
+          <label> Experience</label>
         </Link>
         <Link to="/Projects">
-          <label>Open Projects</label>
+          <label>Projects</label>
         </Link>
         <Link to="/Contact">
-          <label>Open coontact</label>
+          <label>Contact</label>
         </Link>
       </div>
     </div>

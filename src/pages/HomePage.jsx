@@ -1,15 +1,40 @@
 import NavBar from "../components/NavBar/NavBar";
 import { AppContext } from "../contexts/AppProvider";
 import { useContext } from "react";
+import Styles from "./HomePage.module.css";
+import { Link } from "react-router-dom";
 
 export default function HomePage() {
   const { myInfo, loading } = useContext(AppContext);
 
   return (
-    <div>
+    <div className={Styles.MainPage}>
       <NavBar />
 
-      {loading ? "Loading..." : <p>Home Page: {myInfo.desc}</p>}
+      <div className={Styles.Container}>
+        <img src="../public/ToulouseCity.jpg" height="500" width="600" />
+
+        {loading ? (
+          "Loading..."
+        ) : (
+          <div>
+            <h1>
+              Hi, I'am <span className={Styles.Name}>{myInfo.name}</span>
+            </h1>
+            <h3>{myInfo.title}</h3>
+            {myInfo.desc}
+          </div>
+        )}
+      </div>
+
+      <div className={Styles.ButtonContainer}>
+        <Link to="/Experience" className={Styles.link}>
+          <button>Experience</button>
+        </Link>
+        <Link to="/Projects">
+          <button> Projects</button>
+        </Link>
+      </div>
     </div>
   );
 }

@@ -8,7 +8,7 @@
 
 .section {
   display: flex;
-  gap: 25px;
+  gap: 0px;
   padding: 5px;
 }
 
@@ -17,6 +17,7 @@ a {
   color: beige;
   font-weight: 500;
   cursor: pointer;
+  margin-right: 25px;
 }
 
 a:hover {
@@ -29,16 +30,9 @@ label {
   cursor: pointer;
 }
 
-img {
-  padding: 0;
-  margin: 0;
-  align-self: baseline;
-  fill: beige;
-}
-
 .HomeIcon {
   padding: 0;
-  margin: 0;
+  margin-left: 20px;
   vertical-align: bottom;
   fill: beige;
 }
