@@ -17,8 +17,22 @@ function AppProvider({ children }) {
       });
 
       setMyExpLst([
-        { title: "blabla", desc: "blablab desc", year: "1960" },
-        { title: "blabla", desc: "blablab desc", year: "1962" },
+        {
+          title: ".NET Software Developer for Airbus",
+          desc: "Development and maintenance of software supporting assisted assembly lines for manufacturing. This critical software is used internationally in England, Germany, France, and Spain, with over 1,000 users.",
+          year: "Dec 2023 - Now",
+        },
+        {
+          title: "C++ Qt Software Developer for Airbus",
+          desc: "Development and maintenance of software for editing specification sheets of critical systems for aeronautics in C++ Qt.",
+          year: "Nov 2021 – Dec 2023",
+        },
+        {
+          title:
+            "C++ Developer Internship for Liebherr Aerospace and Transportation",
+          desc: "Optimization of a fluid properties calculation DLL, utilized by multiple simulation software. Additionally, a DLL was developed to manipulate diverse fluid data, addressing specific user needs.",
+          year: "Feb 2021 – Aug 2021",
+        },
       ]);
 
       setLoading(false);

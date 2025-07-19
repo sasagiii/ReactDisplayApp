@@ -8,49 +8,71 @@ export default function TimePointExp({
   RightToLeft = false,
 }) {
   return (
-    <tr>
+    <tr style={{ height: "100%" }}>
       {RightToLeft ? (
         <>
-          <td style={{ border: "none", padding: "10px" }}>
+          <td style={{ border: "none", padding: "0px", verticalAlign: "top" }}>
             <div
               style={{
                 display: "flex",
                 flexDirection: "column",
                 justifyContent: "flex-end",
                 alignItems: "flex-end",
+                color: "beige",
               }}
             >
-              <p style={{ fontWeight: "bold" }}>{year}</p>
+              {year}
             </div>
           </td>
-          <td style={{ border: "none", padding: "10px" }}>
+          <td
+            style={{
+              border: "none",
+              padding: "0px",
+              verticalAlign: "top",
+              height: "100%",
+            }}
+          >
             <TimeLine />
           </td>
 
-          <td style={{ border: "none", padding: "10px" }}>
+          <td style={{ border: "none", padding: "0px", verticalAlign: "top" }}>
             <CardBox title={title} desc={desc} />
           </td>
         </>
       ) : (
         <>
-          <td style={{ border: "none", padding: "10px" }}>
+          <td style={{ border: "none", padding: "0px", verticalAlign: "top" }}>
             <CardBox title={title} desc={desc} />
           </td>
 
-          <td style={{ border: "none", padding: "10px" }}>
+          <td
+            style={{
+              border: "none",
+              padding: "0px",
+              verticalAlign: "top",
+              height: "100%",
+            }}
+          >
             <TimeLine />
           </td>
 
-          <td style={{ border: "none", padding: "10px" }}>
+          <td
+            style={{
+              border: "none",
+              padding: "0px",
+              verticalAlign: "top",
+            }}
+          >
             <div
               style={{
                 display: "flex",
                 flexDirection: "column",
                 justifyContent: "flex-start",
                 alignItems: "flex-start",
+                color: "beige",
               }}
             >
-              <p style={{ fontWeight: "bold" }}>{year}</p>
+              {year}
             </div>
           </td>
         </>

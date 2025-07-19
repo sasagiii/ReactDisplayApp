@@ -8,6 +8,7 @@ export default function ExperiencePage() {
   return (
     <div>
       <NavBar />
+      <h1 style={{ textAlign: "center" }}>My Time Points</h1>
       <div
         style={{
           display: "flex",
@@ -18,7 +19,7 @@ export default function ExperiencePage() {
           justifyContent: "center",
         }}
       >
-        <table style={{ borderCollapse: "collapse" }}>
+        <table style={{ borderCollapse: "collapse", borderSpacing: "0" }}>
           <tbody>
             {loading
               ? "is loading"
