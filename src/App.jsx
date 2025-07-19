@@ -11,7 +11,7 @@ import React from "react";
 function App() {
   return (
     <AppProvider>
-      <Router basename="/ReactDisplayApp">
+      <Router basename="/ReactDisplayApp/">
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/Experience" element={<ExperiencePage />} />
