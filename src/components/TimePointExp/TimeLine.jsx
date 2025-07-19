@@ -1,3 +1,5 @@
+import Styles from "./TimeLine.module.css";
+
 export default function TimeLine() {
-  return <div> time point</div>;
+  return <div className={Styles.container}> .</div>;
 }
