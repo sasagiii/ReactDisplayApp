@@ -12,7 +12,7 @@ export default function HomePage() {
       <NavBar />
 
       <div className={Styles.Container}>
-        <img src="../public/ToulouseCity.jpg" height="500" width="600" />
+        <img className={Styles.ImageSize} src="./ToulouseCity.jpg" />
 
         {loading ? (
           "Loading..."
