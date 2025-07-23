@@ -1,0 +1,78 @@
+.MainPage {
+  margin-bottom: 0px;
+}
+
+.ImageSize {
+  height: 500px;
+  width: 600px;
+}
+
+.Container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 20% 25px 20%;
+  gap: 35px;
+  text-align: justify;
+}
+
+@media (max-width: 1500px) {
+  .Container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 2rem 25px 2rem;
+    gap: 35px;
+    text-align: justify;
+  }
+
+  .ImageSize {
+    height: 15rem;
+    width: 15rem;
+  }
+}
+
+.Name {
+  color: brown;
+  font-style: italic;
+  display: inline-block;
+  transition: transform 0.2s ease-in-out;
+}
+
+.Name:hover {
+  transform: scale(1.1);
+  cursor: default;
+}
+
+.ButtonContainer {
+  align-items: center;
+  display: table;
+  margin: 0 auto;
+  justify-content: center;
+}
+
+button {
+  display: block;
+  transition: transform 0.2s ease-in-out;
+
+  height: 120px;
+  width: 450px;
+  align-items: center;
+  font-size: 50px;
+  margin-bottom: 10px;
+  cursor: pointer;
+
+  border-radius: 24px;
+
+  color: beige;
+  background-color: brown;
+}
+
+button:hover {
+  transform: scale(1.1);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
