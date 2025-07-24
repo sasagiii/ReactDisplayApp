@@ -20,19 +20,19 @@ export default function ProjectPage() {
           <div key={index} className={Styles.Container} id={item.Title}>
             {index % 2 === 0 ? (
               <>
-                <p>{item.ImageName}</p>
+                <img className={Styles.ImageSize} src={`./${item.ImageName}`} />
                 <div>
                   <h2>{item.Title}</h2>
-                  <p>{item.Desc}</p>
+                  <p dangerouslySetInnerHTML={{ __html: item.Desc }} />
                 </div>
               </>
             ) : (
               <>
                 <div>
                   <h2>{item.Title}</h2>
-                  <p>{item.Desc}</p>
+                  <p dangerouslySetInnerHTML={{ __html: item.Desc }} />
                 </div>
-                <p>{item.ImageName}</p>
+                <img className={Styles.ImageSize} src={`./${item.ImageName}`} />
               </>
             )}
           </div>
