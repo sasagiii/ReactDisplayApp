@@ -1,6 +1,44 @@
+.wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  width: 100%;
+}
+
+.button {
+  background: rgba(255, 255, 255, 0.8);
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  z-index: 1;
+  padding: 2px 4px;
+  transition: background 0.3s ease;
+  width: 30px;
+  height: 30px;
+}
+
+.button:hover {
+  background: rgb(115, 22, 22);
+}
+
 .container {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 16px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  gap: 16px;
+  padding: 20px 40px;
+  flex: 1;
+  scrollbar-width: none;
+}
+
+.container::-webkit-scrollbar {
+  display: none;
+}
+
+.itemWrapper {
+  scroll-snap-align: center;
+  flex: 0 0 auto;
+  width: 300px;
 }

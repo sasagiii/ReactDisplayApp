@@ -1,0 +1,25 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 12px;
+  border: 2px solid brown;
+  padding: 5px 10px 10px 10px;
+  color: beige;
+  text-align: justify;
+  width: 280px;
+  height: 200px;
+  margin: 0 4px 0 4px;
+  transition: transform 0.2s ease-in-out;
+}
+
+.container:hover {
+  transform: scale(1.2);
+  cursor: pointer;
+}
+
+.ImageSize {
+  height: 180px;
+  width: 260px;
+  margin-bottom: 4px;
+}
