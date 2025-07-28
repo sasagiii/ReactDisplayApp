@@ -4,23 +4,23 @@ import Styles from "./Carousel.module.css";
 
 export default function Carousel({ items }) {
   const containerRef = useRef(null);
+  const intervalRef = useRef(null);
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const scrollToIndex = (index) => {
     const container = containerRef.current;
-    if (!container) return;
+    const children = container?.children;
+    if (!container || !children || index < 0 || index >= children.length)
+      return;
 
-    const child = container.children[index];
-    if (!child) return;
+    const child = children[index];
+    const containerWidth = container.offsetWidth;
+    const childWidth = child.offsetWidth;
 
-    const containerRect = container.getBoundingClientRect();
-    const childRect = child.getBoundingClientRect();
-
-    const offset =
-      child.offsetLeft - container.offsetWidth / 2 + child.offsetWidth / 2;
+    const scrollLeft = child.offsetLeft - containerWidth / 2 + childWidth / 2;
 
     container.scrollTo({
-      left: offset,
+      left: scrollLeft,
       behavior: "smooth",
     });
   };
@@ -38,18 +38,18 @@ export default function Carousel({ items }) {
   };
 
   useEffect(() => {
-    scrollToIndex(currentIndex); // initial scroll
+    scrollToIndex(currentIndex);
 
-    const interval = setInterval(() => {
+    intervalRef.current = setInterval(() => {
       setCurrentIndex((prev) => {
-        const nextIndex = (prev + 1) % items.length;
-        scrollToIndex(nextIndex);
-        return nextIndex;
+        const next = (prev + 1) % items.length;
+        scrollToIndex(next);
+        return next;
       });
-    }, 3000); // adjust speed here
+    }, 3000);
 
-    return () => clearInterval(interval);
-  }, []);
+    return () => clearInterval(intervalRef.current);
+  }, [items.length]);
 
   return (
     <div className={Styles.wrapper}>
