@@ -1,3 +1,4 @@
+import Footer from "../components/Footer/Footer";
 import NavBar from "../components/NavBar/NavBar";
 import TimePointExp from "../components/TimePointExp/TimePointExp";
 import { AppContext } from "../contexts/AppProvider";
@@ -34,6 +35,7 @@ export default function ExperiencePage() {
           </tbody>
         </table>
       </div>
+      <Footer />
     </div>
   );
 }

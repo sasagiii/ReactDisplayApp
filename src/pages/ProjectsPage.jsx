@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import projectPers from "./projectPers.json";
 import Styles from "./ProjectsPage.module.css";
 import Carousel from "../components/Carousel/Carousel";
+import Footer from "../components/Footer/Footer";
 
 export default function ProjectPage() {
   const [items, setItems] = useState([]);
@@ -38,6 +39,7 @@ export default function ProjectPage() {
           </div>
         ))}
       </div>
+      <Footer />
     </>
   );
 }

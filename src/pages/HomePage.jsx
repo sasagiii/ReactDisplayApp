@@ -3,6 +3,7 @@ import { AppContext } from "../contexts/AppProvider";
 import { useContext } from "react";
 import Styles from "./HomePage.module.css";
 import { Link } from "react-router-dom";
+import Footer from "../components/Footer/Footer";
 
 export default function HomePage() {
   const { myInfo, loading } = useContext(AppContext);
@@ -35,6 +36,7 @@ export default function HomePage() {
           <button> Projects</button>
         </Link>
       </div>
+      <Footer />
     </div>
   );
 }
