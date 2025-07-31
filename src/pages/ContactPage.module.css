@@ -1,0 +1,12 @@
+.Container {
+  margin: 0 auto;
+  text-align: center;
+  justify-content: center;
+  flex: 1;
+}
+
+.PageDiv {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
