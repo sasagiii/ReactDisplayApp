@@ -1,0 +1,171 @@
+.experiencePage {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: #333;
+  font-family: "Inter", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.timelineTable {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+  max-width: 1000px;
+}
+
+.timepointRow {
+  height: 100%;
+}
+
+.timepointRow:nth-child(even) .cardContainer {
+  animation: slideInLeft 0.8s ease-out;
+}
+
+.timepointRow:nth-child(odd) .cardContainer {
+  animation: slideInRight 0.8s ease-out;
+}
+
+@keyframes slideInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Table Cells */
+.yearCell,
+.timelineCell,
+.cardCell {
+  border: none;
+  padding: 0;
+  vertical-align: top;
+}
+
+.timelineCell {
+  height: 100%;
+}
+
+.rightAlign {
+  text-align: right;
+  padding-right: 2rem;
+}
+
+.leftAlign {
+  text-align: left;
+  padding-left: 2rem;
+}
+
+/* Year Badge */
+.yearBadge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+  padding: 0.5rem 1rem;
+  margin-top: 1rem;
+  transition: all 0.3s ease;
+}
+
+.yearBadge:hover {
+  background: rgba(255, 255, 255, 0.25);
+  transform: scale(1.05);
+}
+
+.yearText {
+  color: white;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.pageHeader {
+  text-align: center;
+  padding: 4rem 2rem 2rem;
+  color: white;
+}
+
+.pageTitle {
+  font-size: clamp(2.5rem, 5vw, 3.5rem);
+  font-weight: 700;
+  margin-bottom: 1rem;
+  background: linear-gradient(45deg, #f59e0b, #ef4444);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: fadeInUp 0.8s ease-out;
+}
+
+.pageSubtitle {
+  font-size: 1.2rem;
+  color: rgba(255, 255, 255, 0.8);
+  max-width: 600px;
+  margin: 0 auto;
+  animation: fadeInUp 0.8s ease-out 0.2s both;
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Timeline Wrapper */
+.timelineWrapper {
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+  min-height: 60vh;
+}
+
+.loadingContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  color: white;
+  padding: 4rem;
+}
+
+.loadingSpinner {
+  width: 40px;
+  height: 40px;
+  border: 3px solid rgba(255, 255, 255, 0.3);
+  border-top: 3px solid white;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.loadingText {
+  font-size: 1.1rem;
+  color: rgba(255, 255, 255, 0.8);
+}

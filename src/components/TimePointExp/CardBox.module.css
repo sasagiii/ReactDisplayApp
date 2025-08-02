@@ -1,22 +1,62 @@
-.container {
+.cardContainer {
+  position: relative;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  border-radius: 12px;
-  border: 2px solid brown;
-  padding: 5px 10px 10px 10px;
-  color: beige;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
+  padding: 1.5rem;
+  max-width: 350px;
+  margin: 1rem 0;
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+
+.cardContainer:hover {
+  transform: translateY(-8px) scale(1.02);
+  background: rgba(255, 255, 255, 0.15);
+  border-color: rgba(255, 255, 255, 0.3);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+.cardGlow {
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(45deg, #4f46e5, #ec4899, #f59e0b);
+  border-radius: 16px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: -1;
+}
+
+.cardContainer:hover .cardGlow {
+  opacity: 0.3;
+}
+
+.cardHeader {
+  margin-bottom: 1rem;
+}
+
+.cardTitle {
+  color: white;
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin: 0;
+  text-align: center;
+}
+
+.cardContent {
+  flex: 1;
+}
+
+.cardDescription {
+  color: rgba(255, 255, 255, 0.9);
+  line-height: 1.6;
+  font-size: 0.95rem;
   text-align: justify;
-  max-width: 300px;
-  transition: transform 0.2s ease-in-out;
-}
-
-.container:hover {
-  transform: scale(1.2);
-  cursor: default;
-}
-
-h3 {
-  margin: 2% 0 15px 0;
-  color: beige;
+  margin: 0;
 }

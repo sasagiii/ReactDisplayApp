@@ -1,42 +1,77 @@
-.container {
+.navbar {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.navcontainer {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 16px;
-  background-color: #201c1c;
+  padding: 1rem 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
-.section {
+.navsection {
   display: flex;
-  gap: 0px;
-  padding: 5px;
+  align-items: center;
+  gap: 2rem;
 }
 
-a {
+.homelink {
+  display: flex;
+  align-items: center;
   text-decoration: none;
-  color: beige;
+  color: #4f46e5;
+  transition: all 0.3s ease;
+}
+
+.homeicon {
+  fill: currentColor;
+  transition: all 0.3s ease;
+}
+
+.homelink:hover {
+  color: #6366f1;
+  transform: translateY(-2px);
+}
+
+.navlink {
+  text-decoration: none;
+  color: #374151;
   font-weight: 500;
-  cursor: pointer;
-  margin-right: 25px;
+  position: relative;
+  transition: all 0.3s ease;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
 }
 
-a:hover {
-  color: red;
-  text-decoration: underline;
-  cursor: pointer;
+.navlink:hover {
+  color: #4f46e5;
+  background: rgba(79, 70, 229, 0.1);
+  transform: translateY(-2px);
 }
 
-label {
-  cursor: pointer;
+.nav-link span {
+  position: relative;
 }
 
-.HomeIcon {
-  padding: 0;
-  margin-left: 20px;
-  vertical-align: bottom;
-  fill: beige;
+.navlink::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background: #4f46e5;
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
 }
 
-.HomeIcon:hover {
-  fill: red;
+.navlink:hover::after {
+  width: 80%;
 }

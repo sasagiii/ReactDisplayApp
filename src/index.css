@@ -7,9 +7,15 @@
   }
 }
 
-:root {
+* {
   margin: 0;
-  animation: fadeIn 0.8s ease-out;
-  background-color: #211b1b;
-  color: beige;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.main-page {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: #333;
+  font-family: "Inter", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }

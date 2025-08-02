@@ -1,5 +1,6 @@
 import CardBox from "./CardBox";
 import TimeLine from "./TimeLine";
+import Styles from "./TimePointExp.module.css";
 
 export default function TimePointExp({
   title,
@@ -8,71 +9,32 @@ export default function TimePointExp({
   RightToLeft = false,
 }) {
   return (
-    <tr style={{ height: "100%" }}>
+    <tr className={Styles.timepointRow}>
       {RightToLeft ? (
         <>
-          <td style={{ border: "none", padding: "0px", verticalAlign: "top" }}>
-            <div
-              style={{
-                display: "flex",
-                flexDirection: "column",
-                justifyContent: "flex-end",
-                alignItems: "flex-end",
-                color: "beige",
-              }}
-            >
-              {year}
+          <td className={`${Styles.yearCell} ${Styles.rightAlign}`}>
+            <div className={Styles.yearBadge}>
+              <span className={Styles.yearText}>{year}</span>
             </div>
           </td>
-          <td
-            style={{
-              border: "none",
-              padding: "0px",
-              verticalAlign: "top",
-              height: "100%",
-            }}
-          >
+          <td className={Styles.timelineCell}>
             <TimeLine />
           </td>
-
-          <td style={{ border: "none", padding: "0px", verticalAlign: "top" }}>
+          <td className={Styles.cardCell}>
             <CardBox title={title} desc={desc} />
           </td>
         </>
       ) : (
         <>
-          <td style={{ border: "none", padding: "0px", verticalAlign: "top" }}>
+          <td className={Styles.cardCell}>
             <CardBox title={title} desc={desc} />
           </td>
-
-          <td
-            style={{
-              border: "none",
-              padding: "0px",
-              verticalAlign: "top",
-              height: "100%",
-            }}
-          >
+          <td className={Styles.timelineCell}>
             <TimeLine />
           </td>
-
-          <td
-            style={{
-              border: "none",
-              padding: "0px",
-              verticalAlign: "top",
-            }}
-          >
-            <div
-              style={{
-                display: "flex",
-                flexDirection: "column",
-                justifyContent: "flex-start",
-                alignItems: "flex-start",
-                color: "beige",
-              }}
-            >
-              {year}
+          <td className={`${Styles.yearCell} ${Styles.leftAlign}`}>
+            <div className={Styles.yearBadge}>
+              <span className={Styles.yearText}>{year}</span>
             </div>
           </td>
         </>
