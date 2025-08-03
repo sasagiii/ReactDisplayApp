@@ -1,8 +1,24 @@
 import Styles from "./CarouselItem.module.css";
+import { useLocation } from "react-router-dom";
 
 export default function CarouselItem({ item, index }) {
+  const location = useLocation();
+
+  function scrollToId(id) {
+    const el = document.getElementById(id);
+    if (el) el.scrollIntoView({ behavior: "smooth" });
+  }
+
   return (
-    <a href={`#${item.Title}`} className={Styles.carouselLink}>
+    <a
+      className={Styles.carouselLink}
+      onClick={(e) => {
+        e.preventDefault();
+        const el = document.getElementById(item.Title);
+        if (el) el.scrollIntoView({ behavior: "smooth" });
+        window.history.replaceState(null, "", `#/Projects#${item.Title}`);
+      }}
+    >
       <div className={Styles.carouselItem}>
         <div className={Styles.imageContainer}>
           <img
