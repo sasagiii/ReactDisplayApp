@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://sasagiii.github.io/ReactDisplayApp",
+  "homepage": "https://samiben.online",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
