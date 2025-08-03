@@ -52,20 +52,66 @@ export default function Carousel({ items }) {
   }, [items.length]);
 
   return (
-    <div className={Styles.wrapper}>
-      <button className={Styles.button} onClick={scrollLeft}>
-        ◀
-      </button>
-      <div className={Styles.container} ref={containerRef}>
-        {items.map((item, index) => (
-          <div className={Styles.itemWrapper} key={index}>
-            <CarouselItem item={item} index={index} />
-          </div>
+    <div className={Styles.carouselWrapper}>
+      <div className={Styles.carouselHeader}>
+        <h1 className={Styles.carouselTitle}>Featured Projects</h1>
+        <p className={Styles.carouselSubtitle}>Explore my latest work</p>
+      </div>
+
+      <div className={Styles.carouselControls}>
+        <button
+          className={`${Styles.carouselButton} ${Styles.left}`}
+          onClick={scrollLeft}
+        >
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+            <path
+              d="M15 18L9 12L15 6"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            />
+          </svg>
+        </button>
+
+        <div className={Styles.carouselContainer} ref={containerRef}>
+          {items.map((item, index) => (
+            <div className={Styles.carouselItemWrapper} key={index}>
+              <CarouselItem item={item} index={index} />
+            </div>
+          ))}
+        </div>
+
+        <button
+          className={`${Styles.carouselButton} ${Styles.right}`}
+          onClick={scrollRight}
+        >
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+            <path
+              d="M9 18L15 12L9 6"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            />
+          </svg>
+        </button>
+      </div>
+
+      <div className={Styles.carouselIndicators}>
+        {items.map((_, index) => (
+          <button
+            key={index}
+            className={`${Styles.indicator} ${
+              index === currentIndex ? Styles.active : ""
+            }`}
+            onClick={() => {
+              setCurrentIndex(index);
+              scrollToIndex(index);
+            }}
+          />
         ))}
       </div>
-      <button className={Styles.button} onClick={scrollRight}>
-        ▶
-      </button>
     </div>
   );
 }

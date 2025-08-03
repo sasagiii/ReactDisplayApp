@@ -19,7 +19,7 @@ export default function NotFoundPage() {
     <div className={Styles.PageDiv}>
       <NavBar />
       <div className={Styles.Container}>
-        <h1>Wrong Path or page not found...</h1>
+        <h1 className={Styles.Title}>Wrong Path or page not found...</h1>
         {catImage ? (
           <img src={catImage} width="500" height="325"></img>
         ) : (
