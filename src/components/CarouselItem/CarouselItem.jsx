@@ -7,7 +7,7 @@ export default function CarouselItem({ item, index }) {
         <div className={Styles.imageContainer}>
           <img
             className={Styles.carouselImage}
-            src={item.ImageName}
+            src={item.ThumbnailName}
             alt={item.Title}
           />
           <div className={Styles.imageOverlay}>

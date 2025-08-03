@@ -2,37 +2,37 @@
   {
     "Title": "DietGPT",
     "ImageName": "DietGpt.png",
-    "ThumbnailName": "thumb3.jpg",
+    "ThumbnailName": "DietGptT.webp",
     "Desc": "This is a small C# MAUI app that prompts engineer GPT to give some personalized commands. By simply inputting a list of ingredients or pasting a full recipe, users will quickly receive detailed information about the average calories and nutrients in the meal. The goal is to provide a seamless and efficient way to monitor dietary intake without the need for manual calculations."
   },
   {
     "Title": "My Websites",
     "ImageName": "WebSites.webp",
-    "ThumbnailName": "thumb1.jpg",
+    "ThumbnailName": "WebSiteT.webp",
     "Desc": "I wanted to create a personal website to showcase my experience and projects while also having fun building it. With GitHub offering free web hosting, it seemed like the perfect opportunity.<br/> Initially, I built the site from scratch using HTML, CSS, and JavaScript, without any frameworks. The result was a bit rough, considering the amount of effort involved (you can find the link in my Github but note it may contain outdated information).<br/>  In my second attempt, I decided to leverage a website builder with a framework to streamline development. I then customized the CSS and HTML to create a new version of the website. <br/> Lastely I remade it quickly using react (version which I am now satisfied with)."
   },
   {
     "Title": "SeeMoneySpending",
     "ImageName": "MoneySpent.png",
-    "ThumbnailName": "thumb2.jpg",
+    "ThumbnailName": "MoneyT.webp",
     "Desc": "This project was created to cater to individuals like my mom who prefer using cash for most of their transactions.<br/> The motivation behind this project stemmed from my mum's desire to avoid the guilt associated with seeing unnecessary expenses in a bank app. Additionally, she wanted a simple and user-friendly alternative to the fancy and complicated apps available in the market. Project Overview SeeMoneySpending enables users to record their cash transactions, view a list of expenses with dates and amounts, and visualize their yearly spending through a graph.<br/> The application's intuitive interface and straightforward features make it ideal for users who prefer simplicity and ease of use."
   },
   {
     "Title": "MultiMiniApps",
     "ImageName": "QtApp.png",
-    "ThumbnailName": "thumb1.jpg",
+    "ThumbnailName": "AndroidT.jpg",
     "Desc": "I embraced the challenge of crafting an Android application using C++ with QT Creator, breaking away from the conventional Java-based approach. My 'Swiss Army Knife' app offers a diverse range of tools, from a resistance calculator to entertaining mini-games. Throughout the development, I also explored Qt's capabilities for Android, gaining valuable experience along the way. The spaceship game, for instance, leverages the phone's gyroscope for an immersive touch."
   },
   {
     "Title": "Drone scanner",
     "ImageName": "DroneScan.png",
-    "ThumbnailName": "thumb2.jpg",
+    "ThumbnailName": "DroneT.webp",
     "Desc": "In my M2 first-semester project, I collaborated with a team of five to configure and scan a field with a drone, while two team members focused on the landing process. As a programming enthusiast, I developed three programs to generate distinct drone trajectories based on mathematical research.<br/> To ensure accuracy, I used Folium, a user-friendly map library, to display calculated coordinates before transmitting them via a Wi-Fi transmitter. The drone's height and camera angle were vital in determining the flight path, enabling various scanning patterns like spiral scans. This project allowed us to optimize the drone's performance in locating and reaching targets effectively."
   },
   {
     "Title": "Lego Mindstorms",
     "ImageName": "LegoMind.png",
-    "ThumbnailName": "thumb1.jpg",
+    "ThumbnailName": "LegoT.jpg",
     "Desc": "I had an exciting opportunity to work with Lego Mindstorms robots, programming them for various tasks. I successfully navigated an unknown labyrinth and guided the robots out of it. Two robots, equipped with a gyroscope and a light sensor, were particularly notable. The gyroscope enabled precise turns for one robot, while the other utilized the light sensor to follow a black line on a white surface. These experiences allowed me to explore robotics and develop skills in programming and integrating sensors, enhancing my problem-solving abilities and adaptability in different scenarios."
   }
 ]
