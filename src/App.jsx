@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import { HashRouter as Router, Routes, Route, Link } from "react-router-dom";
 import "./App.css";
 import { AppProvider } from "./contexts/AppProvider";
 import HomePage from "./pages/HomePage";
@@ -11,7 +11,7 @@ import React from "react";
 function App() {
   return (
     <AppProvider>
-      <Router basename="/ReactDisplayApp/">
+      <Router>
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/Experience" element={<ExperiencePage />} />
